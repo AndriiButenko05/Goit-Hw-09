@@ -66,10 +66,7 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery-div');
-const list = document.createElement("ul")
-list.classList.add("gallery")
-gallery.append(list)
+const gallery = document.querySelector('.gallery');
 const createMarkup = arr => {
   return arr
     .map(item => {
@@ -88,7 +85,7 @@ const createMarkup = arr => {
     })
     .join('');
 };
-list.insertAdjacentHTML('beforeend', createMarkup(images));
+gallery.insertAdjacentHTML('beforeend', createMarkup(images));
 gallery.addEventListener('click', document.addEventListener("DOMContentLoaded", function () {
     const lightbox = new SimpleLightbox('.gallery a', {
       captions: true,
